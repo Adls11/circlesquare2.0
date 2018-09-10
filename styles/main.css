@@ -1,0 +1,185 @@
+body {
+	
+	margin: 0;
+	padding: 0;
+	//min-width: 1024px;
+	//font-family: 'Open Sans', sans-serif;
+
+}
+
+@keyframes unfolds-menu
+{
+	0%
+	{
+       background-color: red;
+	}
+
+	33%
+	{
+		
+		
+		
+	}
+
+	66%
+	{
+      
+      
+      
+	}
+
+	100%
+	{
+	  width: 512px;
+      background-color: rgba(43,113,232,1);
+	}
+
+	
+
+}
+
+@keyframes unfolds-menu-out
+{
+
+
+	0%
+	{
+      width: 512px;
+      background-color: rgba(43,113,232,1);
+	}
+
+	33%
+	{
+		
+		
+		  background-color: red;
+      
+	}
+
+	66%
+	{
+      
+     
+	}
+
+
+	100%
+	{
+     
+      width: 128px;
+      background-color: #D5D5D5;
+	}
+	
+
+}
+
+@keyframes shlist_menu {
+    from {
+                
+    }
+
+    to {
+          
+         transform: scale(1);  
+
+       
+      
+    }
+}
+
+@keyframes shlist_menu-out {
+    from {
+            
+          transform: scale(1);
+    }
+
+    to {
+          
+           transform: scale(0);
+      }
+}
+
+.list-menu {
+
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	list-style: none;
+	float: left;
+	//background-color: red;
+	position: absolute;
+	top: 40px;
+	left: 150px;
+	
+}
+
+.list-menu li {
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
+	text-align: center;
+	margin-right: 20px;
+	color: white;
+	font-size: 18px;
+	font-weight: ease;
+	font-family: 'Comfortaa';
+	transform: scale(0);
+	animation-name: shlist_menu-out;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	cursor: pointer;
+
+
+
+}
+
+.header-top {
+	margin-top: 20px;
+	position: relative;
+}
+
+.logo {
+	background-color: #D5D5D5;
+	width: 128px;
+	height: 90px;
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-left: 35px;
+    animation-name: unfolds-menu-out;
+    animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	
+	
+
+   
+}
+
+.logo:hover .list-menu li {
+    animation-name: shlist_menu;
+    animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	transition-duration: 0.7s;
+}
+
+.logo:hover .list-menu li:nth-child(1) {
+	animation-delay: 0s;
+}
+.logo:hover .list-menu li:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.logo:hover .list-menu li:nth-child(3) {
+	animation-delay: 0.2s;
+}
+
+
+.logo:hover {
+	animation-name: unfolds-menu;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	transition-duration: 0.7s;
+
+}
